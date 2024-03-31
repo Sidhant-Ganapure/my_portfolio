@@ -96,6 +96,16 @@
     font-weight: bold;
 }
 
+.secondpage .heading h2 {
+    text-align: center;
+    font-size: 22px;
+    margin: 55px;
+    margin-bottom: 40px;
+    color: plum;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .thirdpage .heading h2 {
     text-align: center;
     font-size: 22px;
@@ -182,6 +192,24 @@ hr{
         gap: 20px;
     }
 
+    .secondpage .heading h2 {
+        text-align: center;
+        font-size: 22px;
+        margin: 55px;
+        margin-bottom: 30px;
+        color: plum;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    
+.about-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 1rem;
+}
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -194,21 +222,29 @@ hr{
         gap: 20px;
     }
 
+    
+.about-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
 }
 
 
 .about-container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .about-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 170px;
+    height: 190px;
+    /* width: 100%; */
+    /* border-radius: 50%; */
     margin-bottom: 20px;
-    border: 4px solid #FFA500;
-    /* Adjust margin-bottom for space between image and content */
+    /* border: 4px solid #FFA500; */
+    border: 0.5rem solid #FFA500;
 }
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -524,7 +560,6 @@ hr{
 
 .contact-form {
     background: transparent;
-    background-color: rgb(20, 16, 28);
     text-align: center;
     margin-top: 50px;
     padding: 30px;
@@ -532,7 +567,6 @@ hr{
 }
 
 .form-control {
-    background-color: rgb(20, 16, 28);
     border: none;
     border-bottom: 1px solid #ced4da;
     border-radius: 0;
@@ -541,7 +575,6 @@ hr{
 
 .form-control:focus {
     background-color: transparent;
-    background-color: rgb(20, 16, 28);
     border-color: #ced4da;
     box-shadow: none;
     outline: none;
@@ -565,24 +598,24 @@ hr{
 }
 
 .contact-form input {
-    background-color: rgb(20, 16, 28);
+    background-color: #0a0412;
     color: #fff;
 }
 
 .contact-form textarea {
-    background-color: rgb(20, 16, 28);
+    background-color: #0a0412;
     color: #fff;
 }
 
 .contact-form input:focus {
-    background-color: rgb(20, 16, 28);
+    background-color: #0a0412;
     color: #fff;
     outline: none;
     box-shadow: none;
 }
 
 .contact-form textarea:focus {
-    background-color: rgb(20, 16, 28);
+    background-color: #0a0412;
     color: #fff;
     box-shadow: none;
 }
