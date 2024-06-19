@@ -3,14 +3,7 @@
     "development"
   ],
   "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "-webkit-overflow-scrolling"
-        ]
-      }
-    ],
+    "no-inline-styles": "off",
     "axe/name-role-value": [
       "default",
       {
@@ -23,8 +16,17 @@
         "aria-command-name": "off"
       }
     ],
-    "no-inline-styles": "off",
     "disown-opener": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-overflow-scrolling",
+          "user-select",
+          "max-width: fit-content"
+        ]
+      }
+    ],
     "axe/structure": [
       "default",
       {

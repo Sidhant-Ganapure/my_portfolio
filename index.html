@@ -51,15 +51,79 @@
       transform: translateX(0);
 
     }
+
+    .marquee {
+            --gap: 0.1rem;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: var(--gap);
+            border-top: 0.4rem double #FFA500;
+            border-bottom: 0.4rem double #FFA500;
+            padding: 5px;
+          }
+
+        .marquee__content {
+            flex-shrink: 0;
+            display: flex;
+            gap: var(--gap);
+            gap: 50px;
+            min-width: 100%;
+            animation: scroll 20s linear infinite;
+            color: #fff;
+            margin-bottom: 0px;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-100% - var(--gap)));
+            }
+        }
+
+
+        .marquee--reverse .marquee__content {
+            animation-direction: reverse;
+        }
+
+ 
+        .marquee--fit-content {
+            max-width: fit-content;
+        }
+
+        .marquee--pos-absolute .marquee__content:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .enable-animation .marquee--pos-absolute .marquee__content:last-child {
+            animation-name: scroll-abs;
+        }
+
+        @keyframes scroll-abs {
+            from {
+                transform: translateX(calc(100% + var(--gap)));
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
   </style>
 </head>
 
-<body style="background-color: #0a0412" onload="document.body.classList.add('show')">
+<body style="background-color: #000000" onload="document.body.classList.add('show')">
 
   <header data-bs-theme="dark">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style=" background-color: rgb(0, 0, 0);">
       <div class="container-fluid">
-        <a class="navbar-brand p-0 text-warning" href="#">Sidhant ganapure</a>
+        <a class="navbar-brand p-0 text-warning" href="#firstpage">Sidhant ganapure</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -114,8 +178,48 @@
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
 
+    <section>
+      <div class="marquee">
+          <ul class="marquee__content">
+             <span>HTML</span>
+             <span>CSS</span>
+             <span>JavaScript</span>
+             <span>React.js</span>
+             <span>Node.js</span>               
+             <span>Express.js</span>               
+             <span>MongoDB</span>               
+             <span>Bootstrap</span>               
+             <span>Tailwind CSS</span>               
+             <span>Figma</span>               
+             <span>Python</span>               
+             <span>C</span>               
+             <span>C++</span>               
+             <span>PHP</span>               
+             <span>MySQL</span>               
+          </ul>
+
+          <ul aria-hidden="true" class="marquee__content">
+            <span>HTML</span>
+             <span>CSS</span>
+             <span>JavaScript</span>
+             <span>React.js</span>
+             <span>Node.js</span>               
+             <span>Express.js</span>               
+             <span>MongoDB</span>               
+             <span>Bootstrap</span>               
+             <span>Tailwind CSS</span>               
+             <span>Figma</span>               
+             <span>Python</span>               
+             <span>C</span>               
+             <span>C++</span>               
+             <span>PHP</span>               
+             <span>MySQL</span>       
+          </ul>
+      </div>
+  </section>
+<!-- <hr> -->
     <div class="secondpage" id="secondpage">
       <div class="container">
         <div class="row justify-content-center">
@@ -123,7 +227,7 @@
             <h2># About me #</h2>
           </div>
           <div class="col-lg-6 about-container">
-            <img src="images/image.jpeg" alt="Portfolio Image" class="about-image">
+            <img src="images/profile-pic.jpeg" alt="Portfolio Image" class="about-image">
             <h3>Hello, I'm Sidhant Ram Ganapure.</h3>
             <p class="">As a full-stack developer, I enjoy working on both the frontend and backend of web
               applications.
@@ -134,12 +238,52 @@
                 href="https://www.linkedin.com/in/sidhant-ganapure" target="_blank"
                 style="text-decoration: none;">LinkedIn</a> or drop me an email at <a href="#"
                 style="text-decoration: none;">ganapuresidhant@gmail.com</a></p>
-            <a href="link-to-resume.pdf" class="btn border-3 border-warning text-light mt-3 mb-3">Download Resume</a>
+            <a href="images/my_resume.pdf" class="btn border-4 border-warning text-light mt-3 mb-3">Download Resume</a>
           </div>
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
+
+    <section>
+      <div class="marquee marquee--reverse">
+          <ul class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>            
+          </ul>
+
+          <ul aria-hidden="true" class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>       
+          </ul>
+      </div>
+  </section>
 
     <div class="thirdpage" id="thirdpage">
       <div class="heading">
@@ -221,7 +365,47 @@
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
+
+    <section>
+      <div class="marquee">
+          <ul class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>              
+          </ul>
+
+          <ul aria-hidden="true" class="marquee__content">
+            <span>HTML</span>
+             <span>CSS</span>
+             <span>JavaScript</span>
+             <span>React.js</span>
+             <span>Node.js</span>               
+             <span>Express.js</span>               
+             <span>MongoDB</span>               
+             <span>Bootstrap</span>               
+             <span>Tailwind CSS</span>               
+             <span>Figma</span>               
+             <span>Python</span>               
+             <span>C</span>               
+             <span>C++</span>               
+             <span>PHP</span>               
+             <span>MySQL</span>     
+          </ul>
+      </div>
+  </section>
 
     <div class="fourthpage" id="fourthpage">
       <div class="heading">
@@ -271,25 +455,106 @@
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
+
+    <section>
+      <div class="marquee marquee--reverse">
+          <ul class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>            
+          </ul>
+
+          <ul aria-hidden="true" class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>      
+          </ul>
+      </div>
+  </section>
 
     <div class="fifthpage" id="fifthpage">
       <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <form class="contact-form">
-              <h2>Contact Me</h2>
-              <p>If you have any questions or would like to discuss a project, feel free to get in touch.</p>
-              <input type="text" class="form-control border-3 border-warning" placeholder="Your Name">
-              <input type="email" class="form-control border-3 border-warning" placeholder="Your Email">
-              <textarea class="form-control border-3 border-warning" rows="4" placeholder="Your Message" maxlength="200"
+              <div class="heading">
+                <h2># Contact me #</h2>
+              </div>
+                      <p>If you have any questions or would like to discuss a project, feel free to get in touch.</p>
+              <input type="text" class="form-control border-3.1 border-info" placeholder="Your Name">
+              <input type="email" class="form-control border-3.1 border-info" placeholder="Your Email">
+              <textarea class="form-control border-3.1 border-info" rows="4" placeholder="Your Message" maxlength="200"
                 style="resize: none;"></textarea>
-              <button type="submit" class="btn border-3 border-warning text-light">Send Message</button>
+              <button type="submit" class="btn border-4 border-warning text-light">Send Message</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <section>
+      <div class="marquee">
+          <ul class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>            
+          </ul>
+
+          <ul aria-hidden="true" class="marquee__content">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>               
+            <span>Express.js</span>               
+            <span>MongoDB</span>               
+            <span>Bootstrap</span>               
+            <span>Tailwind CSS</span>               
+            <span>Figma</span>               
+            <span>Python</span>               
+            <span>C</span>               
+            <span>C++</span>               
+            <span>PHP</span>               
+            <span>MySQL</span>     
+          </ul>
+      </div>
+  </section>
   </main>
 
   <footer>

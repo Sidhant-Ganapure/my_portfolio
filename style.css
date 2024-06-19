@@ -91,7 +91,7 @@
     text-align: center;
     font-size: 22px;
     margin: 55px;
-    color: plum;
+    color: rgb(252, 4, 252);;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -101,7 +101,7 @@
     font-size: 22px;
     margin: 55px;
     margin-bottom: 40px;
-    color: plum;
+    color: rgb(252, 4, 252);;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -110,7 +110,7 @@
     text-align: center;
     font-size: 22px;
     margin: 55px;
-    color: plum;
+    color: rgb(252, 4, 252);;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -120,15 +120,10 @@
     font-size: 22px;
     margin: 55px;
     margin-bottom: 30px;
-    color: plum;
+    color: rgb(252, 4, 252);;
     text-transform: uppercase;
     font-weight: bold;
 }
-
-.fifthpage h2 {
-    color: yellow;
-}
-
 
 hr{
     border: none;
@@ -146,6 +141,7 @@ hr{
 
 .navbar-nav .nav-link {
     font-size: 18px;
+    font-weight: 600;
     margin-right: 15px;
     padding: 0px;
 }
@@ -170,6 +166,24 @@ hr{
 .social-icons .fab {
     color: gold;
 }
+
+.image {
+    width: 260px;
+    height: 190px;
+    /* width: 100%; */
+    /* border-radius: 50%; */
+    margin-bottom: 20px;
+    /* border: 0.5rem solid #FFA500; */
+    /* border: 0.5rem dashed #FFA500; */
+    /* border: 0.5rem dotted #FFA500; */
+    /* border: 0.5rem double #FFA500; */
+    border: 0.5rem ridge #FFA500;
+    /* border: 0.5rem groove #FFA500; */
+    /* border: 0.5rem inset #FFA500; */
+    /* border: 0.5rem outset #FFA500; */
+    cursor: pointer;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------------------------- */
@@ -241,10 +255,17 @@ hr{
     width: 170px;
     height: 190px;
     /* width: 100%; */
-    /* border-radius: 50%; */
+    border-radius: 50%;
     margin-bottom: 20px;
-    /* border: 4px solid #FFA500; */
-    border: 0.5rem solid #FFA500;
+    /* border: 0.5rem solid #FFA500; */
+    /* border: 0.5rem dashed #FFA500; */
+    /* border: 0.5rem dotted #FFA500; */
+    border: 0.6rem double #FFA500;
+    /* border: 0.5rem ridge #FFA500; */
+    /* border: 0.5rem groove #FFA500; */
+    /* border: 0.5rem inset #FFA500; */
+    /* border: 0.5rem outset #FFA500; */
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -274,7 +295,7 @@ hr{
     width: 9rem;
     height: 8rem;
     background-color: #fff;
-    border: 3px solid greenyellow;
+    border: 0.3rem solid #adff2f;
 }
 
 .skills .card:hover{
@@ -429,7 +450,7 @@ hr{
 
 .projects .card {
     text-align: center;
-    border: 3px solid greenyellow;
+    border: 0.3rem solid greenyellow;
 }
 
 .projects .card img{
@@ -567,7 +588,7 @@ hr{
 }
 
 .form-control {
-    border: none;
+    border: 0.4rem solid yellowgreen;
     border-bottom: 1px solid #ced4da;
     border-radius: 0;
     margin-bottom: 20px;
@@ -600,11 +621,14 @@ hr{
 .contact-form input {
     background-color: #0a0412;
     color: #fff;
+    border: 0.25rem solid yellowgreen;
+
 }
 
 .contact-form textarea {
     background-color: #0a0412;
     color: #fff;
+    border: 0.25rem solid yellowgreen;
 }
 
 .contact-form input:focus {
